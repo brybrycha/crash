@@ -4,12 +4,12 @@
   import Intro from "./Components/Intro.svelte";
   import TextAndMathEquations from "./Components/TextAndMathEquations.svelte";
   import PieChart from "./Components/PieChart.svelte";
-  import ScrollCenter from "./Components/ScrollCenter.svelte";
+  import Map from "./Components/Map.svelte";
   import Conclusion from "./Components/Conclusion.svelte";
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
 
-  // Example data for the PieChart component
+  // going to replace this with real data later
   const pieChartData = [
     { label: 'A', value: 30 },
     { label: 'B', value: 70 },
@@ -24,7 +24,7 @@
 <Intro />
 <TextAndMathEquations />
 <ScrollSide />
-<PieChart data = {pieChartData} />
-<ScrollCenter />
+<PieChart data = {pieChartData} /> 
+<Map />
 <Conclusion />
 <Resources />
