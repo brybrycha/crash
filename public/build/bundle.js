@@ -204,17 +204,6 @@ var app = (function () {
     function onMount(fn) {
         get_current_component().$$.on_mount.push(fn);
     }
-    /**
-     * Schedules a callback to run immediately before the component is unmounted.
-     *
-     * Out of `onMount`, `beforeUpdate`, `afterUpdate` and `onDestroy`, this is the
-     * only one that runs inside a server-side component.
-     *
-     * https://svelte.dev/docs#run-time-svelte-ondestroy
-     */
-    function onDestroy(fn) {
-        get_current_component().$$.on_destroy.push(fn);
-    }
 
     const dirty_components = [];
     const binding_callbacks = [];
@@ -43302,30 +43291,30 @@ var app = (function () {
     			t = space();
     			svg_1 = svg_element("svg");
     			attr_dev(div, "id", "tooltip");
-    			attr_dev(div, "class", "svelte-17v4mec");
-    			add_location(div, file$7, 84, 2, 2323);
-    			attr_dev(svg_1, "class", "svelte-17v4mec");
-    			add_location(svg_1, file$7, 85, 2, 2370);
+    			attr_dev(div, "class", "svelte-fxhnqc");
+    			add_location(div, file$7, 90, 0, 2311);
+    			attr_dev(svg_1, "class", "svelte-fxhnqc");
+    			add_location(svg_1, file$7, 91, 0, 2356);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
-    			/*div_binding*/ ctx[3](div);
+    			/*div_binding*/ ctx[4](div);
     			insert_dev(target, t, anchor);
     			insert_dev(target, svg_1, anchor);
-    			/*svg_1_binding*/ ctx[4](svg_1);
+    			/*svg_1_binding*/ ctx[5](svg_1);
     		},
     		p: noop$4,
     		i: noop$4,
     		o: noop$4,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div);
-    			/*div_binding*/ ctx[3](null);
+    			/*div_binding*/ ctx[4](null);
     			if (detaching) detach_dev(t);
     			if (detaching) detach_dev(svg_1);
-    			/*svg_1_binding*/ ctx[4](null);
+    			/*svg_1_binding*/ ctx[5](null);
     		}
     	};
 
@@ -43353,28 +43342,31 @@ var app = (function () {
     		const height = 450;
     		const margin = 40;
     		const radius = Math.min(width, height) / 2 - margin;
-    		svg.selectAll("*").remove();
-    		const color = ordinal().domain(data.map(d => d.label)).range(['#1f77b4', '#ff7f0e', '#808080']); // Blue for Male, Orange for Female, gray for non-traced
-    		const pie$1 = pie().sort(null).value(d => d.value); // Disable sorting to keep the order
-    		const data_ready = pie$1(data);
-    		const arc$1 = arc().innerRadius(0).outerRadius(radius);
 
-    		svg.selectAll('path').data(data_ready).enter().append('path').attr('d', arc$1).attr('fill', d => color(d.data.label)).attr('stroke', 'black').style('stroke-width', '2px').style('opacity', 0.7).on('mouseover', (event, d) => {
-    			const proportion = (d.data.value / sum$2(data, d => d.value) * 100).toFixed(2);
-    			select(tooltip).style('opacity', 1).html(`<strong>${d.data.label}</strong><br/># of Incidents: ${d.data.value}<br/>Proportion: ${proportion}%`);
-    		}).on('mousemove', event => {
-    			select(tooltip).style('left', `${event.pageX + 10}px`).style('top', `${event.pageY - 25}px`);
-    		}).on('mouseout', () => {
-    			select(tooltip).style('opacity', 0);
-    		});
+    		if (svg) {
+    			svg.selectAll("*").remove(); // Clear existing content
+    			const color = ordinal().domain(data.map(d => d.label)).range(['#1f77b4', '#ff7f0e', '#808080']); // Blue for Male, Orange for Female, gray for non-traced
+    			const pie$1 = pie().sort(null).value(d => d.value); // Disable sorting to keep the order
+    			const data_ready = pie$1(data);
+    			const arc$1 = arc().innerRadius(0).outerRadius(radius);
 
-    		svg.selectAll('text').data(data_ready).enter().append('text').text(d => d.data.label).attr('transform', d => `translate(${arc$1.centroid(d)})`).style('text-anchor', 'middle').style('font-size', 15).style('fill', 'black');
+    			svg.selectAll('path').data(data_ready).enter().append('path').attr('d', arc$1).attr('fill', d => color(d.data.label)).attr('stroke', 'black').style('stroke-width', '2px').style('opacity', 0.7).on('mouseover', (event, d) => {
+    				const proportion = (d.data.value / sum$2(data, d => d.value) * 100).toFixed(2);
+    				select(tooltip).style('opacity', 1).html(`<strong>${d.data.label}</strong><br/># of Incidents: ${d.data.value}<br/>Proportion: ${proportion}%`);
+    			}).on('mousemove', event => {
+    				select(tooltip).style('left', `${event.pageX + 10}px`).style('top', `${event.pageY - 25}px`);
+    			}).on('mouseout', () => {
+    				select(tooltip).style('opacity', 0);
+    			});
+
+    			svg.selectAll('text').data(data_ready).enter().append('text').text(d => d.data.label).attr('transform', d => `translate(${arc$1.centroid(d)})`).style('text-anchor', 'middle').style('font-size', 15).style('fill', 'black');
+    		}
     	}
 
     	onMount(() => {
     		const width = 450;
     		const height = 450;
-    		svg = select(svgRef).attr('width', width).attr('height', height).append('g').attr('transform', `translate(${width / 2},${height / 2})`);
+    		$$invalidate(3, svg = select(svgRef).attr('width', width).attr('height', height).append('g').attr('transform', `translate(${width / 2},${height / 2})`));
     		drawChart();
     	});
 
@@ -43404,7 +43396,6 @@ var app = (function () {
 
     	$$self.$capture_state = () => ({
     		onMount,
-    		onDestroy,
     		d3,
     		data,
     		svgRef,
@@ -43417,15 +43408,24 @@ var app = (function () {
     		if ('data' in $$props) $$invalidate(2, data = $$props.data);
     		if ('svgRef' in $$props) $$invalidate(0, svgRef = $$props.svgRef);
     		if ('tooltip' in $$props) $$invalidate(1, tooltip = $$props.tooltip);
-    		if ('svg' in $$props) svg = $$props.svg;
+    		if ('svg' in $$props) $$invalidate(3, svg = $$props.svg);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	drawChart();
-    	return [svgRef, tooltip, data, div_binding, svg_1_binding];
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*svg*/ 8) {
+    			{
+    				if (svg) {
+    					drawChart();
+    				}
+    			}
+    		}
+    	};
+
+    	return [svgRef, tooltip, data, svg, div_binding, svg_1_binding];
     }
 
     class GenderPie extends SvelteComponentDev {

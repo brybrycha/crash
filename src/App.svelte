@@ -96,7 +96,7 @@
 <PieChart data={pieChartData} />
 
 <h2 style="text-align: center;">Gender Distribution of Accidents</h2>
-<GenderPie data={genderData} />
+<GenderPie data = {genderData} />
 
 <Map />
 <Conclusion />
