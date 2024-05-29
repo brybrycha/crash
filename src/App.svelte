@@ -15,13 +15,14 @@
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
 
+
   let accidentData = [];
   let selectedYearRange = [2014, 2015];
   let pieChartData = [];
   let genderData = [];
 
   async function fetchAccidentData() {
-    accidentData = await d3.csv("https://raw.githubusercontent.com/brybrycha/crash/main/public/Road_Collision_Vehicles_In_Camden.csv");
+    accidentData = await d3.csv("https://raw.githubusercontent.com/brybrycha/crashdata/main/Road_Collision_Vehicles_In_Camden.csv");
     cleanData();
     updatePieChartData();
   }
@@ -35,8 +36,7 @@
       } else {
         d.accidentYear = null;
       }
-
-      // Clean 'Time' column
+// Clean 'Time' column
       d.Time = d.Time ? parseFloat(d.Time.replace(':', '.')) : null;
 
       // Clean 'Driver Sex' column
@@ -54,7 +54,6 @@
       }
     });
   }
-
   function updatePieChartData() {
     const filteredData = accidentData.filter(d => {
       return d.accidentYear >= selectedYearRange[0] && d.accidentYear <= selectedYearRange[1];
@@ -78,8 +77,7 @@
       { label: 'Non Traced', value: nonCount },
     ];
   }
-
-  onMount(() => {
+onMount(() => {
     fetchAccidentData();
   });
 
@@ -91,13 +89,13 @@
 <Intro />
 <MapDayNight /> 
 
-<Intro />
+<!-- <Intro /> -->
 
 <Map />
 
-<!-- <BarChart/> -->
+<BarChart/>
 
 
-<Conclusion />
-<Map />
-<Resources />
+<!-- <Conclusion /> -->
+
+<!-- <Resources /> -->

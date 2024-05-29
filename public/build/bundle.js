@@ -706,28 +706,28 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			h10 = element("h1");
-    			h10.textContent = "Title Of The Article";
+    			h10.textContent = "Correlation between Car Accidents and Time";
     			t1 = space();
     			h11 = element("h1");
-    			h11.textContent = "Subtitle of the article.";
+    			h11.textContent = "How does time of the day manipulate car accident rates";
     			t3 = space();
     			h3 = element("h3");
     			a = element("a");
-    			a.textContent = "Author Name";
-    			t5 = text$1(", Month Year");
+    			a.textContent = "Chole Kim, Bryan Cha";
+    			t5 = text$1(", May 2024");
     			attr_dev(h10, "id", "intro-hed");
-    			attr_dev(h10, "class", "svelte-x47e3y");
+    			attr_dev(h10, "class", "svelte-2ztgw0");
     			add_location(h10, file$c, 1, 2, 23);
-    			attr_dev(h11, "class", "intro-sub svelte-x47e3y");
-    			add_location(h11, file$c, 2, 2, 70);
-    			attr_dev(a, "href", "https://twitter.com/");
+    			attr_dev(h11, "class", "intro-sub svelte-2ztgw0");
+    			add_location(h11, file$c, 2, 2, 92);
+    			attr_dev(a, "href", "https://github.com/brybrycha");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file$c, 4, 4, 150);
-    			attr_dev(h3, "id", "intro__date");
-    			attr_dev(h3, "class", "svelte-x47e3y");
-    			add_location(h3, file$c, 3, 2, 124);
+    			add_location(a, file$c, 4, 4, 201);
+    			attr_dev(h3, "id", "introdate");
+    			attr_dev(h3, "class", "svelte-2ztgw0");
+    			add_location(h3, file$c, 3, 2, 177);
     			attr_dev(section, "id", "intro");
-    			attr_dev(section, "class", "svelte-x47e3y");
+    			attr_dev(section, "class", "svelte-2ztgw0");
     			add_location(section, file$c, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -795,36 +795,26 @@ var app = (function () {
     function create_fragment$c(ctx) {
     	let section;
     	let p0;
-    	let t0;
-    	let a;
-    	let t2;
     	let span;
-    	let t4;
-    	let t5;
+    	let t0;
+    	let t1;
     	let p1;
 
     	const block = {
     		c: function create() {
     			section = element("section");
     			p0 = element("p");
-    			t0 = text$1("Lorem ipsum dolor sit amet ");
-    			a = element("a");
-    			a.textContent = "random link";
-    			t2 = text$1(" adipisicing elit. Esse\n    dolor nobis\n    ");
     			span = element("span");
-    			span.textContent = "bold text";
-    			t4 = text$1(" eius voluptate distinctio odit ut quod illo!\n    Nulla consequatur fugiat quia commodi aspernatur necessitatibus est doloremque\n    quam vitae dolorem. Vitae natus ipsum animi officiis et quis obcaecati in molestiae\n    aperiam, perferendis odio a ipsam nam suscipit laboriosam corporis excepturi\n    quisquam? Ratione delectus repellat error maxime quo beatae ullam, quod");
-    			t5 = space();
+    			t0 = text$1(" We were interested in researching about the how does time of the day affects car accidents rate, and we used car accidents data in Camdens, UK. \n    We created a line chart with d3 and svelte scrolly so that the graphs gets drawn when we scroll down. We also have created a map chart with dots on it utilizing d3 and mapbox. \n    You can see the accidents frequency that happened day time and night time, and it contains zoom function, count function, and resizing accidents counting area. We also have created a bar chart that allows user to compare accidents’ \n    severity between day time and night time accidents. The most Challenging part of the project is going go be making map visualization and bar chart interactive and making transition smooth. As the buttons of night and day time have to\n    change the design of maps and bar chart data design, it is going to be challenging.");
+    			t1 = space();
     			p1 = element("p");
     			p1.textContent = "This is a trr";
-    			attr_dev(a, "href", "");
-    			add_location(a, file$b, 5, 31, 85);
     			attr_dev(span, "class", "bold");
-    			add_location(span, file$b, 7, 4, 155);
+    			add_location(span, file$b, 5, 4, 58);
     			attr_dev(p0, "class", "body-text");
     			add_location(p0, file$b, 4, 2, 32);
     			attr_dev(p1, "class", "body-text");
-    			add_location(p1, file$b, 13, 2, 573);
+    			add_location(p1, file$b, 11, 2, 983);
     			add_location(section, file$b, 3, 0, 20);
     		},
     		l: function claim(nodes) {
@@ -833,12 +823,9 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
     			append_dev(section, p0);
-    			append_dev(p0, t0);
-    			append_dev(p0, a);
-    			append_dev(p0, t2);
     			append_dev(p0, span);
-    			append_dev(p0, t4);
-    			append_dev(section, t5);
+    			append_dev(p0, t0);
+    			append_dev(section, t1);
     			append_dev(section, p1);
     		},
     		p: noop$4,
@@ -43448,68 +43435,89 @@ var app = (function () {
     const file$7 = "src/Components/Map.svelte";
 
     function create_fragment$8(ctx) {
-    	let div1;
-    	let div0;
-    	let t0;
     	let div2;
-    	let button0;
+    	let div0;
+    	let strong;
+    	let t1;
     	let t2;
+    	let t3;
+    	let div1;
+    	let t4;
+    	let div3;
+    	let button0;
+    	let t6;
     	let button1;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
-    			div0 = element("div");
-    			t0 = space();
     			div2 = element("div");
+    			div0 = element("div");
+    			strong = element("strong");
+    			strong.textContent = "Total Accidents in View:";
+    			t1 = space();
+    			t2 = text$1(/*totalAccidents*/ ctx[0]);
+    			t3 = space();
+    			div1 = element("div");
+    			t4 = space();
+    			div3 = element("div");
     			button0 = element("button");
     			button0.textContent = "Daytime";
-    			t2 = space();
+    			t6 = space();
     			button1 = element("button");
     			button1.textContent = "Nighttime";
-    			attr_dev(div0, "id", "map");
-    			attr_dev(div0, "class", "svelte-1lh8o03");
-    			add_location(div0, file$7, 290, 2, 7752);
-    			attr_dev(div1, "id", "map-container");
-    			attr_dev(div1, "class", "svelte-1lh8o03");
-    			add_location(div1, file$7, 289, 0, 7725);
-    			attr_dev(button0, "class", "svelte-1lh8o03");
-    			add_location(button0, file$7, 294, 2, 7814);
-    			attr_dev(button1, "class", "svelte-1lh8o03");
-    			add_location(button1, file$7, 295, 2, 7866);
-    			attr_dev(div2, "class", "button-container svelte-1lh8o03");
-    			add_location(div2, file$7, 293, 0, 7781);
+    			add_location(strong, file$7, 325, 4, 8709);
+    			attr_dev(div0, "class", "info-box svelte-1soki1n");
+    			add_location(div0, file$7, 324, 2, 8682);
+    			attr_dev(div1, "id", "map");
+    			attr_dev(div1, "class", "svelte-1soki1n");
+    			add_location(div1, file$7, 327, 2, 8779);
+    			attr_dev(div2, "id", "map-container");
+    			attr_dev(div2, "class", "svelte-1soki1n");
+    			add_location(div2, file$7, 323, 0, 8655);
+    			attr_dev(button0, "class", "svelte-1soki1n");
+    			add_location(button0, file$7, 331, 2, 8841);
+    			attr_dev(button1, "class", "svelte-1soki1n");
+    			add_location(button1, file$7, 332, 2, 8893);
+    			attr_dev(div3, "class", "button-container svelte-1soki1n");
+    			add_location(div3, file$7, 330, 0, 8808);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			insert_dev(target, t0, anchor);
     			insert_dev(target, div2, anchor);
-    			append_dev(div2, button0);
-    			append_dev(div2, t2);
-    			append_dev(div2, button1);
+    			append_dev(div2, div0);
+    			append_dev(div0, strong);
+    			append_dev(div0, t1);
+    			append_dev(div0, t2);
+    			append_dev(div2, t3);
+    			append_dev(div2, div1);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, div3, anchor);
+    			append_dev(div3, button0);
+    			append_dev(div3, t6);
+    			append_dev(div3, button1);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*toggleDaytime*/ ctx[0], false, false, false, false),
-    					listen_dev(button1, "click", /*toggleNighttime*/ ctx[1], false, false, false, false)
+    					listen_dev(button0, "click", /*toggleDaytime*/ ctx[1], false, false, false, false),
+    					listen_dev(button1, "click", /*toggleNighttime*/ ctx[2], false, false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
-    		p: noop$4,
+    		p: function update(ctx, [dirty]) {
+    			if (dirty & /*totalAccidents*/ 1) set_data_dev(t2, /*totalAccidents*/ ctx[0]);
+    		},
     		i: noop$4,
     		o: noop$4,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
-    			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(div3);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -43557,6 +43565,7 @@ var app = (function () {
     	let stationData = [];
     	let stationMarkers;
     	let isDaytime = true;
+    	let totalAccidents = 0;
 
     	onMount(async () => {
     		mapboxgl.accessToken = "pk.eyJ1IjoiYnJjaGEiLCJhIjoiY2x3bGFxcDRlMW5wODJzb2N0eHFmM2FjeCJ9.Q47OaoGh6RIGs5d54fPiqw";
@@ -43592,7 +43601,12 @@ var app = (function () {
     			// Initial clustering of accidents
     			updateAccidentClusters();
 
-    			map.on('zoomend', updateAccidentClusters);
+    			map.on('zoomend', () => {
+    				updateAccidentClusters();
+    				updateVisibleAccidents();
+    			});
+
+    			map.on('moveend', updateVisibleAccidents);
 
     			// Create SVG container for station markers
     			select(map.getCanvasContainer()).append("svg").attr("width", "100%").attr("height", "100%").style("position", "absolute").style("z-index", 2); // Ensure SVG is on top
@@ -43616,6 +43630,8 @@ var app = (function () {
     				map.getCanvas().style.cursor = '';
     				tooltip.remove();
     			});
+
+    			updateVisibleAccidents();
     		});
     	});
 
@@ -43689,11 +43705,14 @@ var app = (function () {
     				}
     			});
     		}
+
+    		updateVisibleAccidents();
     	}
 
     	function updateAccidentData() {
     		accidentLocations = processAccidentData(accidentData);
     		updateAccidentClusters();
+    		updateVisibleAccidents(); // Ensure the initial count is correct
     	}
 
     	function createStationMarkers(stationData) {
@@ -43741,6 +43760,22 @@ var app = (function () {
     		return scaleRadius(traffic);
     	}
 
+    	function updateVisibleAccidents() {
+    		const bounds = map.getBounds();
+
+    		const visibleFeatures = map.queryRenderedFeatures({ layers: ['accident_points'] }).filter(feature => {
+    			const [lng, lat] = feature.geometry.coordinates;
+    			return lng >= bounds.getWest() && lng <= bounds.getEast() && lat >= bounds.getSouth() && lat <= bounds.getNorth();
+    		});
+
+    		$$invalidate(0, totalAccidents = visibleFeatures.reduce(
+    			(sum, feature) => {
+    				return sum + feature.properties.accidents;
+    			},
+    			0
+    		));
+    	}
+
     	const writable_props = [];
 
     	Object_1.keys($$props).forEach(key => {
@@ -43757,6 +43792,7 @@ var app = (function () {
     		stationData,
     		stationMarkers,
     		isDaytime,
+    		totalAccidents,
     		stationsFile,
     		getStyleBasedOnTime,
     		processAccidentData,
@@ -43768,7 +43804,8 @@ var app = (function () {
     		project,
     		toggleDaytime,
     		toggleNighttime,
-    		scaleRadiusTrafficVolume
+    		scaleRadiusTrafficVolume,
+    		updateVisibleAccidents
     	});
 
     	$$self.$inject_state = $$props => {
@@ -43778,13 +43815,14 @@ var app = (function () {
     		if ('stationData' in $$props) stationData = $$props.stationData;
     		if ('stationMarkers' in $$props) stationMarkers = $$props.stationMarkers;
     		if ('isDaytime' in $$props) isDaytime = $$props.isDaytime;
+    		if ('totalAccidents' in $$props) $$invalidate(0, totalAccidents = $$props.totalAccidents);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [toggleDaytime, toggleNighttime];
+    	return [totalAccidents, toggleDaytime, toggleNighttime];
     }
 
     class Map$1 extends SvelteComponentDev {
@@ -45081,65 +45119,88 @@ var app = (function () {
     }
 
     /* src/Components/BarChart.svelte generated by Svelte v3.59.2 */
-
     const file = "src/Components/BarChart.svelte";
 
     function create_fragment$1(ctx) {
-    	let div;
-    	let input;
-    	let input_value_value;
-    	let t0;
+    	let div2;
+    	let div0;
     	let label;
-    	let t1_value = `${/*selectedYearRange*/ ctx[0][0]}-${/*selectedYearRange*/ ctx[0][1]}` + "";
     	let t1;
+    	let input;
+    	let t2;
+    	let span;
+    	let t3;
+    	let t4;
+    	let div1;
+    	let svg;
     	let mounted;
     	let dispose;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			input = element("input");
-    			t0 = space();
+    			div2 = element("div");
+    			div0 = element("div");
     			label = element("label");
-    			t1 = text$1(t1_value);
-    			attr_dev(input, "id", "yearRangeInput");
+    			label.textContent = "Select Year:";
+    			t1 = space();
+    			input = element("input");
+    			t2 = space();
+    			span = element("span");
+    			t3 = text$1(/*selectedYear*/ ctx[0]);
+    			t4 = space();
+    			div1 = element("div");
+    			svg = svg_element("svg");
+    			attr_dev(label, "for", "year-slider");
+    			add_location(label, file, 176, 4, 5138);
+    			attr_dev(input, "id", "year-slider");
     			attr_dev(input, "type", "range");
-    			attr_dev(input, "min", "2014");
-    			attr_dev(input, "max", "2018");
-    			attr_dev(input, "step", "1");
-    			input.value = input_value_value = /*selectedYearRange*/ ctx[0][0];
-    			add_location(input, file, 12, 4, 301);
-    			attr_dev(label, "for", "yearRangeInput");
-    			add_location(label, file, 21, 4, 484);
-    			attr_dev(div, "class", "year-selector svelte-1akw69o");
-    			add_location(div, file, 11, 2, 269);
+    			attr_dev(input, "min", "2015");
+    			attr_dev(input, "max", "2019");
+    			input.value = /*selectedYear*/ ctx[0];
+    			add_location(input, file, 177, 4, 5189);
+    			attr_dev(span, "class", "year-label svelte-31tzsk");
+    			add_location(span, file, 185, 4, 5367);
+    			attr_dev(div0, "class", "slider-container svelte-31tzsk");
+    			add_location(div0, file, 175, 2, 5103);
+    			attr_dev(svg, "id", "dual-bar-chart");
+    			add_location(svg, file, 188, 4, 5459);
+    			attr_dev(div1, "class", "chart-container svelte-31tzsk");
+    			add_location(div1, file, 187, 2, 5425);
+    			attr_dev(div2, "class", "container svelte-31tzsk");
+    			add_location(div2, file, 174, 0, 5077);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, input);
-    			append_dev(div, t0);
-    			append_dev(div, label);
-    			append_dev(label, t1);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			append_dev(div0, label);
+    			append_dev(div0, t1);
+    			append_dev(div0, input);
+    			append_dev(div0, t2);
+    			append_dev(div0, span);
+    			append_dev(span, t3);
+    			append_dev(div2, t4);
+    			append_dev(div2, div1);
+    			append_dev(div1, svg);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "input", /*handleSliderChange*/ ctx[1], false, false, false, false);
+    				dispose = listen_dev(input, "input", /*input_handler*/ ctx[2], false, false, false, false);
     				mounted = true;
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*selectedYearRange*/ 1 && input_value_value !== (input_value_value = /*selectedYearRange*/ ctx[0][0])) {
-    				prop_dev(input, "value", input_value_value);
+    			if (dirty & /*selectedYear*/ 1) {
+    				prop_dev(input, "value", /*selectedYear*/ ctx[0]);
     			}
 
-    			if (dirty & /*selectedYearRange*/ 1 && t1_value !== (t1_value = `${/*selectedYearRange*/ ctx[0][0]}-${/*selectedYearRange*/ ctx[0][1]}` + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*selectedYear*/ 1) set_data_dev(t3, /*selectedYear*/ ctx[0]);
     		},
     		i: noop$4,
     		o: noop$4,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div2);
     			mounted = false;
     			dispose();
     		}
@@ -45159,58 +45220,121 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('BarChart', slots, []);
-    	let { selectedYearRange } = $$props;
-    	let { onChange } = $$props;
+    	let selectedYear = 2015;
+    	let accidentData = [];
+    	let processedData = [];
 
-    	function handleSliderChange(event) {
-    		const startYear = +event.target.value;
-    		$$invalidate(0, selectedYearRange = [startYear, startYear + 1]);
-    		onChange(selectedYearRange);
+    	function preprocessData(data) {
+    		const parseDate = timeParse('%d/%m/%Y %I:%M:%S %p');
+    		const parseTime = timeParse('%H.%M');
+
+    		data.forEach(d => {
+    			if (d.Date && d.Severity) {
+    				d.date = parseDate(d.Date);
+    				d.year = d.date ? d.date.getFullYear() : null;
+    				d.time = parseTime(d.Time);
+    				d.hour = d.time ? d.time.getHours() : null;
+    				d.daytime = d.hour >= 6 && d.hour < 18 ? 'Daytime' : 'Nighttime';
+
+    				d.severity = d.Severity.toLowerCase().includes('fatal')
+    				? 'Severity 1 - FATAL'
+    				: d.Severity.toLowerCase().includes('serious')
+    					? 'Severity 2 - SERIOUS'
+    					: d.Severity.toLowerCase().includes('slight')
+    						? 'Severity 3 - SLIGHT'
+    						: null;
+
+    				if (d.year && d.daytime && d.severity) {
+    					processedData.push(d);
+    				}
+    			}
+    		});
     	}
 
-    	$$self.$$.on_mount.push(function () {
-    		if (selectedYearRange === undefined && !('selectedYearRange' in $$props || $$self.$$.bound[$$self.$$.props['selectedYearRange']])) {
-    			console.warn("<BarChart> was created without expected prop 'selectedYearRange'");
-    		}
+    	// Function to filter data by year and severity
+    	function filterDataByYear(year) {
+    		const filteredData = processedData.filter(d => d.year == year);
 
-    		if (onChange === undefined && !('onChange' in $$props || $$self.$$.bound[$$self.$$.props['onChange']])) {
-    			console.warn("<BarChart> was created without expected prop 'onChange'");
-    		}
+    		const severityCounts = groups(filteredData, d => d.severity, d => d.daytime).map(d => {
+    			const daytime = d[1].find(v => v[0] === 'Daytime')?.[1].length || 0;
+    			const nighttime = d[1].find(v => v[0] === 'Nighttime')?.[1].length || 0;
+    			return { severity: d[0], daytime, nighttime };
+    		});
+
+    		return severityCounts;
+    	}
+
+    	// Function to draw the chart
+    	function drawChart(data) {
+    		const margin = { top: 40, right: 0, bottom: 40, left: 100 };
+    		const width = 1500 - margin.left - margin.right;
+    		const height = 600 - margin.top - margin.bottom;
+    		select("#dual-bar-chart").selectAll("*").remove();
+    		const svg = select("#dual-bar-chart").attr("width", 2300).attr("height", 1000).append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    		const maxCount = max$4(data, d => Math.max(d.daytime, d.nighttime));
+    		const x = linear().domain([0, maxCount]).range([0, width / 2]); // Only positive values
+    		const y = band().domain(data.map(d => d.severity)).range([0, height]).padding(0.6); // Adjust padding to reduce bar thickness
+    		svg.append("g").call(axisLeft(y));
+    		svg.append("g").attr("transform", `translate(${width / 2}, 0)`).call(axisBottom(x).ticks(5));
+    		svg.selectAll(".bar.daytime").data(data).enter().append("rect").attr("class", "bar daytime").attr("x", d => width / 2 - x(d.daytime)).attr("y", d => y(d.severity)).attr("width", d => x(d.daytime)).attr("height", y.bandwidth()).attr("fill", "orange");
+    		svg.selectAll(".bar.nighttime").data(data).enter().append("rect").attr("class", "bar nighttime").attr("x", width / 2).attr("y", d => y(d.severity)).attr("width", d => x(d.nighttime)).attr("height", y.bandwidth()).attr("fill", "blue");
+    		svg.selectAll(".label.daytime").data(data).enter().append("text").attr("class", "label daytime").attr("x", d => width / 2 - x(d.daytime) / 2).attr("y", d => y(d.severity) + y.bandwidth() / 2).attr("dy", ".35em").attr("text-anchor", "middle").style("fill", "white").text(d => d.daytime);
+    		svg.selectAll(".label.nighttime").data(data).enter().append("text").attr("class", "label nighttime").attr("x", d => width / 2 + x(d.nighttime) / 2).attr("y", d => y(d.severity) + y.bandwidth() / 2).attr("dy", ".35em").attr("text-anchor", "middle").style("fill", "white").text(d => d.nighttime);
+    		svg.append("text").attr("x", width / 2 - 10).attr("y", -10).attr("text-anchor", "end").text("Daytime").style("fill", "orange");
+    		svg.append("text").attr("x", width / 2 + 10).attr("y", -10).attr("text-anchor", "start").text("Nighttime").style("fill", "blue");
+    	}
+
+    	// Function to update the chart when the selected year changes
+    	function updateChart(year) {
+    		$$invalidate(0, selectedYear = year);
+    		const filteredData = filterDataByYear(year);
+    		drawChart(filteredData);
+    	}
+
+    	onMount(async () => {
+    		accidentData = await csv("https://raw.githubusercontent.com/brybrycha/crash/main/public/Road_Collision_Vehicles_In_Camden.csv");
+    		preprocessData(accidentData);
+    		updateChart(selectedYear);
     	});
 
-    	const writable_props = ['selectedYearRange', 'onChange'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<BarChart> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$$set = $$props => {
-    		if ('selectedYearRange' in $$props) $$invalidate(0, selectedYearRange = $$props.selectedYearRange);
-    		if ('onChange' in $$props) $$invalidate(2, onChange = $$props.onChange);
-    	};
+    	const input_handler = e => updateChart(e.target.value);
 
     	$$self.$capture_state = () => ({
-    		selectedYearRange,
-    		onChange,
-    		handleSliderChange
+    		onMount,
+    		d3,
+    		csv,
+    		selectedYear,
+    		accidentData,
+    		processedData,
+    		preprocessData,
+    		filterDataByYear,
+    		drawChart,
+    		updateChart
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('selectedYearRange' in $$props) $$invalidate(0, selectedYearRange = $$props.selectedYearRange);
-    		if ('onChange' in $$props) $$invalidate(2, onChange = $$props.onChange);
+    		if ('selectedYear' in $$props) $$invalidate(0, selectedYear = $$props.selectedYear);
+    		if ('accidentData' in $$props) accidentData = $$props.accidentData;
+    		if ('processedData' in $$props) processedData = $$props.processedData;
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [selectedYearRange, handleSliderChange, onChange];
+    	return [selectedYear, updateChart, input_handler];
     }
 
     class BarChart extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init$1(this, options, instance$1, create_fragment$1, safe_not_equal, { selectedYearRange: 0, onChange: 2 });
+    		init$1(this, options, instance$1, create_fragment$1, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -45218,22 +45342,6 @@ var app = (function () {
     			options,
     			id: create_fragment$1.name
     		});
-    	}
-
-    	get selectedYearRange() {
-    		throw new Error("<BarChart>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set selectedYearRange(value) {
-    		throw new Error("<BarChart>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get onChange() {
-    		throw new Error("<BarChart>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set onChange(value) {
-    		throw new Error("<BarChart>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
@@ -45244,29 +45352,20 @@ var app = (function () {
     	let t0;
     	let title;
     	let t1;
-    	let intro0;
+    	let intro;
     	let t2;
     	let mapdaynight;
     	let t3;
-    	let intro1;
+    	let map;
     	let t4;
-    	let map0;
-    	let t5;
-    	let conclusion;
-    	let t6;
-    	let map1;
-    	let t7;
-    	let resources;
+    	let barchart;
     	let current;
     	meta = new Meta({ $$inline: true });
     	title = new Title({ $$inline: true });
-    	intro0 = new Intro({ $$inline: true });
+    	intro = new Intro({ $$inline: true });
     	mapdaynight = new MapDayNight({ $$inline: true });
-    	intro1 = new Intro({ $$inline: true });
-    	map0 = new Map$1({ $$inline: true });
-    	conclusion = new Conclusion({ $$inline: true });
-    	map1 = new Map$1({ $$inline: true });
-    	resources = new Resources({ $$inline: true });
+    	map = new Map$1({ $$inline: true });
+    	barchart = new BarChart({ $$inline: true });
 
     	const block = {
     		c: function create() {
@@ -45274,19 +45373,13 @@ var app = (function () {
     			t0 = space();
     			create_component(title.$$.fragment);
     			t1 = space();
-    			create_component(intro0.$$.fragment);
+    			create_component(intro.$$.fragment);
     			t2 = space();
     			create_component(mapdaynight.$$.fragment);
     			t3 = space();
-    			create_component(intro1.$$.fragment);
+    			create_component(map.$$.fragment);
     			t4 = space();
-    			create_component(map0.$$.fragment);
-    			t5 = space();
-    			create_component(conclusion.$$.fragment);
-    			t6 = space();
-    			create_component(map1.$$.fragment);
-    			t7 = space();
-    			create_component(resources.$$.fragment);
+    			create_component(barchart.$$.fragment);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -45296,45 +45389,33 @@ var app = (function () {
     			insert_dev(target, t0, anchor);
     			mount_component(title, target, anchor);
     			insert_dev(target, t1, anchor);
-    			mount_component(intro0, target, anchor);
+    			mount_component(intro, target, anchor);
     			insert_dev(target, t2, anchor);
     			mount_component(mapdaynight, target, anchor);
     			insert_dev(target, t3, anchor);
-    			mount_component(intro1, target, anchor);
+    			mount_component(map, target, anchor);
     			insert_dev(target, t4, anchor);
-    			mount_component(map0, target, anchor);
-    			insert_dev(target, t5, anchor);
-    			mount_component(conclusion, target, anchor);
-    			insert_dev(target, t6, anchor);
-    			mount_component(map1, target, anchor);
-    			insert_dev(target, t7, anchor);
-    			mount_component(resources, target, anchor);
+    			mount_component(barchart, target, anchor);
     			current = true;
     		},
     		p: noop$4,
-    		i: function intro(local) {
+    		i: function intro$1(local) {
     			if (current) return;
     			transition_in(meta.$$.fragment, local);
     			transition_in(title.$$.fragment, local);
-    			transition_in(intro0.$$.fragment, local);
+    			transition_in(intro.$$.fragment, local);
     			transition_in(mapdaynight.$$.fragment, local);
-    			transition_in(intro1.$$.fragment, local);
-    			transition_in(map0.$$.fragment, local);
-    			transition_in(conclusion.$$.fragment, local);
-    			transition_in(map1.$$.fragment, local);
-    			transition_in(resources.$$.fragment, local);
+    			transition_in(map.$$.fragment, local);
+    			transition_in(barchart.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(meta.$$.fragment, local);
     			transition_out(title.$$.fragment, local);
-    			transition_out(intro0.$$.fragment, local);
+    			transition_out(intro.$$.fragment, local);
     			transition_out(mapdaynight.$$.fragment, local);
-    			transition_out(intro1.$$.fragment, local);
-    			transition_out(map0.$$.fragment, local);
-    			transition_out(conclusion.$$.fragment, local);
-    			transition_out(map1.$$.fragment, local);
-    			transition_out(resources.$$.fragment, local);
+    			transition_out(map.$$.fragment, local);
+    			transition_out(barchart.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
@@ -45342,19 +45423,13 @@ var app = (function () {
     			if (detaching) detach_dev(t0);
     			destroy_component(title, detaching);
     			if (detaching) detach_dev(t1);
-    			destroy_component(intro0, detaching);
+    			destroy_component(intro, detaching);
     			if (detaching) detach_dev(t2);
     			destroy_component(mapdaynight, detaching);
     			if (detaching) detach_dev(t3);
-    			destroy_component(intro1, detaching);
+    			destroy_component(map, detaching);
     			if (detaching) detach_dev(t4);
-    			destroy_component(map0, detaching);
-    			if (detaching) detach_dev(t5);
-    			destroy_component(conclusion, detaching);
-    			if (detaching) detach_dev(t6);
-    			destroy_component(map1, detaching);
-    			if (detaching) detach_dev(t7);
-    			destroy_component(resources, detaching);
+    			destroy_component(barchart, detaching);
     		}
     	};
 
@@ -45378,7 +45453,7 @@ var app = (function () {
     	let genderData = [];
 
     	async function fetchAccidentData() {
-    		accidentData = await csv("https://raw.githubusercontent.com/brybrycha/crash/main/public/Road_Collision_Vehicles_In_Camden.csv");
+    		accidentData = await csv("https://raw.githubusercontent.com/brybrycha/crashdata/main/Road_Collision_Vehicles_In_Camden.csv");
     		cleanData();
     		updatePieChartData();
     	}

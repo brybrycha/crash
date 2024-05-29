@@ -1,8 +1,8 @@
 <section id="intro">
-  <h1 id="intro-hed">Title Of The Article</h1>
-  <h1 class="intro-sub">Subtitle of the article.</h1>
-  <h3 id="intro__date">
-    <a href="https://twitter.com/" target="_blank">Author Name</a>, Month Year
+  <h1 id="intro-hed">Correlation between Car Accidents and Time</h1>
+  <h1 class="intro-sub"> How does time of the day manipulate car accident rates</h1>
+  <h3 id="introdate">
+    <a href="https://github.com/brybrycha" target="_blank">Chole Kim, Bryan Cha</a>, May 2024
   </h3>
 </section>
 
@@ -35,7 +35,7 @@
     font-family: var(--font-main);
   }
 
-  #intro__date {
+  #introdate {
     font-size: 1.1rem;
     color: var(--squid-ink);
     margin: 0px;

@@ -9,6 +9,7 @@
   let stationData = [];
   let stationMarkers;
   let isDaytime = true;
+  let totalAccidents = 0;
   const stationsFile = "https://raw.githubusercontent.com/dsc-courses/dsc106-wi24/gh-pages/resources/data/lab6_station_info.json";
 
   onMount(async () => {
@@ -52,7 +53,12 @@
       // Initial clustering of accidents
       updateAccidentClusters();
 
-      map.on('zoomend', updateAccidentClusters);
+      map.on('zoomend', () => {
+        updateAccidentClusters();
+        updateVisibleAccidents();
+      });
+
+      map.on('moveend', updateVisibleAccidents);
 
       // Create SVG container for station markers
       const markerContainer = d3.select(map.getCanvasContainer())
@@ -90,6 +96,8 @@
         map.getCanvas().style.cursor = '';
         tooltip.remove();
       });
+
+      updateVisibleAccidents();
     });
   });
 
@@ -190,11 +198,14 @@
         }
       });
     }
+
+    updateVisibleAccidents();
   }
 
   function updateAccidentData() {
     accidentLocations = processAccidentData(accidentData);
     updateAccidentClusters();
+    updateVisibleAccidents(); // Ensure the initial count is correct
   }
 
   function createStationMarkers(stationData) {
@@ -259,6 +270,20 @@
       .range([0, 5, 15]);
     return scaleRadius(traffic);
   }
+
+  function updateVisibleAccidents() {
+    const bounds = map.getBounds();
+    const visibleFeatures = map.queryRenderedFeatures({
+      layers: ['accident_points']
+    }).filter(feature => {
+      const [lng, lat] = feature.geometry.coordinates;
+      return lng >= bounds.getWest() && lng <= bounds.getEast() && lat >= bounds.getSouth() && lat <= bounds.getNorth();
+    });
+
+    totalAccidents = visibleFeatures.reduce((sum, feature) => {
+      return sum + feature.properties.accidents;
+    }, 0);
+  }
 </script>
 
 <style>
@@ -285,9 +310,21 @@
     padding: 10px 20px;
     font-size: 16px;
   }
+  .info-box {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
 </style>
 
 <div id="map-container">
+  <div class="info-box">
+    <strong>Total Accidents in View:</strong> {totalAccidents}
+  </div>
   <div id="map"></div>
 </div>
 
