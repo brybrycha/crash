@@ -10,7 +10,7 @@
   import Conclusion from "./Components/Conclusion.svelte";
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
-  import PieSlider from "./Components/PieSlider.svelte";
+  import BarChart from "./Components/BarChart.svelte";
 
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
@@ -89,16 +89,15 @@
 <Meta />
 <Title />
 <Intro />
-<TextAndMathEquations />
-<ScrollSide />
+<MapDayNight /> 
 
-<h2 style="text-align: center;">Daytime vs Nighttime Accidents</h2>
-<PieSlider {selectedYearRange} onChange={() => updatePieChartData()} />
-<PieChart data={pieChartData} />
+<Intro />
 
-<h2 style="text-align: center;">Gender Distribution of Accidents</h2>
-<GenderPie data = {genderData} />
-<MapDayNight />
+<Map />
+
+<!-- <BarChart/> -->
+
+
 <Conclusion />
 <Map />
 <Resources />
