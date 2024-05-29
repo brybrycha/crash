@@ -15,14 +15,14 @@
     const radius = Math.min(width, height) / 2 - margin;
 
     if (svg) {
-      svg.selectAll("*").remove(); // Clear existing content
+      svg.selectAll("*").remove();
 
       const color = d3.scaleOrdinal()
         .domain(data.map(d => d.label))
         .range(['#1f77b4', '#ff7f0e', '#808080']); // Blue for Male, Orange for Female, gray for non-traced
 
       const pie = d3.pie()
-        .sort(null) // Disable sorting to keep the order
+        .sort(null) 
         .value(d => d.value);
 
       const data_ready = pie(data);

@@ -6,6 +6,7 @@
   import PieChart from "./Components/PieChart.svelte";
   import GenderPie from "./Components/GenderPie.svelte";
   import Map from "./Components/Map.svelte";
+  import MapDayNight from "./Components/MapDayNight.svelte"
   import Conclusion from "./Components/Conclusion.svelte";
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
@@ -97,7 +98,7 @@
 
 <h2 style="text-align: center;">Gender Distribution of Accidents</h2>
 <GenderPie data = {genderData} />
-
-<Map />
+<MapDayNight />
 <Conclusion />
+<Map />
 <Resources />
