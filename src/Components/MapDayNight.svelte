@@ -15,7 +15,7 @@
   });
 
   function drawLineGraph() {
-    const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+    const margin = { top: 30, right: 20, bottom: 30, left: 40 };
     const width = 960 - margin.left - margin.right;
     const height = 500 - margin.top - margin.bottom;
 
@@ -125,7 +125,7 @@
 <style>
   #line-graph-container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
   }
   svg {

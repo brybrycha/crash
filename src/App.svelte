@@ -2,14 +2,15 @@
   import Meta from "./Meta.svelte";
   import Title from "./Components/Title.svelte";
   import Intro from "./Components/Intro.svelte";
-  import TextAndMathEquations from "./Components/TextAndMathEquations.svelte";
-  import PieChart from "./Components/PieChart.svelte";
-  import GenderPie from "./Components/GenderPie.svelte";
+  import LineWrite from "./Components/LineWrite.svelte";
+  import LineExp from "./Components/LineExp.svelte";
   import Map from "./Components/Map.svelte";
   import MapDayNight from "./Components/MapDayNight.svelte"
-  import Conclusion from "./Components/Conclusion.svelte";
-  import Resources from "./Components/Resources.svelte";
-  import ScrollSide from "./Components/ScrollSide.svelte";
+  import Sev1 from "./Components/Sev1.svelte";
+  import Sev1A from "./Components/Sev1A.svelte";
+  import PieChart from "./Components/PieChart.svelte";
+  import Sev2 from "./Components/Sev2.svelte";
+  import Sev2A from "./Components/Sev 2A.svelte";
   import BarChart from "./Components/BarChart.svelte";
 
   import { onMount } from 'svelte';
@@ -84,16 +85,35 @@ onMount(() => {
   $: updatePieChartData(); 
 </script>
 
+<style>
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+ </style> 
+
+
 <Meta />
 <Title />
 <Intro />
+<LineWrite />
+
 <MapDayNight /> 
 
+<LineExp />
 <!-- <Intro /> -->
 
-<Map />
+<div class = "container">
+  <Map />
+</div>
 
+<Sev1 />
+<PieChart />
+<Sev1A />
+
+<Sev2 />
 <BarChart/>
+<Sev2A />
 
 
 <!-- <Conclusion /> -->
