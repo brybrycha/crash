@@ -20,7 +20,7 @@
     By examining these proportions, we gain a better understanding of how accident severities are distributed overall. 
     The predominance of <span class='level'>'slight'</span> accidents highlights the relative safety of most incidents, while the smaller percentages 
     of <span class='level'>'serious'</span> and <span class='level'>'fatal'</span> accidents remind us of the potential dangers on the roads.
-
+    <br><br>
   </p>
   
 </section>

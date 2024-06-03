@@ -4,11 +4,10 @@
 <section>
   <p class="body-text">
     <br>
-    <span class="highlight">Imagine</span> you're driving to work on a busy morning, 
-    the roads bustling with cars, and suddenly, you witness an accident. Ever wonder why accidents 
-    seem to happen more frequently at certain times of the day? In this analysis, we dive into the 
-    fluctuations in accident rates throughout the day, uncovering the patterns that reveal when accidents 
-    are most likely to occur. By exploring these trends, we can better understand the high-risk periods and the factors that might contribute to these dangerous times on the road.
+    <span class="highlight">Ever</span> thought about why car accidents tend to happen more at certain times? 
+    In this exploration, we track how accident rates change throughout the day. 
+    We reveal the times when accidents are most frequent and identify high-risk periods. 
+    This analysis helps us understand the factors behind these dangerous moments on the road and how we might mitigate them.
     <br>
   </p>
 </section>

@@ -670,39 +670,61 @@ var app = (function () {
 
     function create_fragment$c(ctx) {
     	let section;
-    	let p0;
+    	let p;
     	let span;
-    	let t0;
     	let t1;
-    	let p1;
+    	let br0;
+    	let br1;
+    	let t2;
+    	let br2;
+    	let br3;
+    	let t3;
+    	let br4;
+    	let br5;
 
     	const block = {
     		c: function create() {
     			section = element("section");
-    			p0 = element("p");
+    			p = element("p");
     			span = element("span");
-    			t0 = text$1(" We were interested in researching about the how does time of the day affects car accidents rate, and we used car accidents data in Camdens, UK. \n    We created a line chart with d3 and svelte scrolly so that the graphs gets drawn when we scroll down. We also have created a map chart with dots on it utilizing d3 and mapbox. \n    You can see the accidents frequency that happened day time and night time, and it contains zoom function, count function, and resizing accidents counting area. We also have created a bar chart that allows user to compare accidents’ \n    severity between day time and night time accidents. The most Challenging part of the project is going go be making map visualization and bar chart interactive and making transition smooth. As the buttons of night and day time have to\n    change the design of maps and bar chart data design, it is going to be challenging.");
-    			t1 = space();
-    			p1 = element("p");
-    			p1.textContent = "This is a trr";
-    			attr_dev(span, "class", "bold");
-    			add_location(span, file$c, 5, 4, 58);
-    			attr_dev(p0, "class", "body-text");
-    			add_location(p0, file$c, 4, 2, 32);
-    			attr_dev(p1, "class", "body-text");
-    			add_location(p1, file$c, 11, 2, 983);
-    			add_location(section, file$c, 3, 0, 20);
+    			span.textContent = "P";
+    			t1 = text$1("icture a busy morning in Camden, UK. \n    The streets are alive with activity when suddenly, the sound of screeching tires and a crash pierces the air. \n    What if the time of day could predict the likelihood of such accidents?\n    ");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t2 = text$1("\n    This article examines the frequency and severity of auto accidents in Camden, UK, \n    over the course of the day. We explore trends in the data by using a variety of interactive visualizations.\n    ");
+    			br2 = element("br");
+    			br3 = element("br");
+    			t3 = text$1("\n    Join us as we delve into the daily rhythms of road safety, analyzing peak times and comparing accidents during the day and night to understand how timing influences road incidents.\n    ");
+    			br4 = element("br");
+    			br5 = element("br");
+    			attr_dev(span, "class", "highlight svelte-e447pv");
+    			add_location(span, file$c, 2, 4, 38);
+    			add_location(br0, file$c, 5, 4, 303);
+    			add_location(br1, file$c, 5, 8, 307);
+    			add_location(br2, file$c, 8, 4, 515);
+    			add_location(br3, file$c, 8, 8, 519);
+    			add_location(br4, file$c, 10, 4, 713);
+    			add_location(br5, file$c, 10, 8, 717);
+    			attr_dev(p, "class", "body-text svelte-e447pv");
+    			add_location(p, file$c, 1, 2, 12);
+    			add_location(section, file$c, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, section, anchor);
-    			append_dev(section, p0);
-    			append_dev(p0, span);
-    			append_dev(p0, t0);
-    			append_dev(section, t1);
-    			append_dev(section, p1);
+    			append_dev(section, p);
+    			append_dev(p, span);
+    			append_dev(p, t1);
+    			append_dev(p, br0);
+    			append_dev(p, br1);
+    			append_dev(p, t2);
+    			append_dev(p, br2);
+    			append_dev(p, br3);
+    			append_dev(p, t3);
+    			append_dev(p, br4);
+    			append_dev(p, br5);
     		},
     		p: noop$4,
     		i: noop$4,
@@ -769,13 +791,13 @@ var app = (function () {
     			br0 = element("br");
     			t0 = space();
     			span = element("span");
-    			span.textContent = "Imagine";
-    			t2 = text$1(" you're driving to work on a busy morning, \n    the roads bustling with cars, and suddenly, you witness an accident. Ever wonder why accidents \n    seem to happen more frequently at certain times of the day? In this analysis, we dive into the \n    fluctuations in accident rates throughout the day, uncovering the patterns that reveal when accidents \n    are most likely to occur. By exploring these trends, we can better understand the high-risk periods and the factors that might contribute to these dangerous times on the road.\n    ");
+    			span.textContent = "Ever";
+    			t2 = text$1(" thought about why car accidents tend to happen more at certain times? \n    In this exploration, we track how accident rates change throughout the day. \n    We reveal the times when accidents are most frequent and identify high-risk periods. \n    This analysis helps us understand the factors behind these dangerous moments on the road and how we might mitigate them.\n    ");
     			br1 = element("br");
     			add_location(br0, file$b, 5, 4, 58);
     			attr_dev(span, "class", "highlight svelte-ieur5w");
     			add_location(span, file$b, 6, 4, 67);
-    			add_location(br1, file$b, 11, 4, 640);
+    			add_location(br1, file$b, 10, 4, 474);
     			attr_dev(p, "class", "body-text");
     			add_location(p, file$b, 4, 2, 32);
     			add_location(section, file$b, 3, 0, 20);
@@ -26134,10 +26156,10 @@ var app = (function () {
     			div0 = element("div");
     			t0 = text$1(/*currentHour*/ ctx[0]);
     			t1 = text$1(":00");
-    			attr_dev(div0, "class", "clock svelte-1ir8fsq");
-    			add_location(div0, file$8, 44, 4, 947);
-    			attr_dev(div1, "class", "clock-container svelte-1ir8fsq");
-    			add_location(div1, file$8, 43, 2, 913);
+    			attr_dev(div0, "class", "clock svelte-aze90b");
+    			add_location(div0, file$8, 62, 2, 1305);
+    			attr_dev(div1, "class", "clock-container svelte-aze90b");
+    			add_location(div1, file$8, 61, 0, 1273);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -26169,17 +26191,24 @@ var app = (function () {
     	return block;
     }
 
+    const scrollThreshold = 18; // Adjust this value to control sensitivity
+
     function instance$8($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Clock', slots, []);
     	let { currentHour = 0 } = $$props;
     	let { onChangeHour } = $$props;
+    	let scrollDelta = 0;
 
     	function handleWheel(event) {
-    		if (event.deltaY > 0) {
+    		scrollDelta += event.deltaY;
+
+    		if (scrollDelta > scrollThreshold) {
     			$$invalidate(0, currentHour = (currentHour + 1) % 24);
-    		} else {
+    			scrollDelta = 0;
+    		} else if (scrollDelta < -scrollThreshold) {
     			$$invalidate(0, currentHour = (currentHour - 1 + 24) % 24);
+    			scrollDelta = 0;
     		}
 
     		if (onChangeHour) {
@@ -26216,12 +26245,15 @@ var app = (function () {
     		onMount,
     		currentHour,
     		onChangeHour,
+    		scrollDelta,
+    		scrollThreshold,
     		handleWheel
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('currentHour' in $$props) $$invalidate(0, currentHour = $$props.currentHour);
     		if ('onChangeHour' in $$props) $$invalidate(1, onChangeHour = $$props.onChangeHour);
+    		if ('scrollDelta' in $$props) scrollDelta = $$props.scrollDelta;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -26298,19 +26330,19 @@ var app = (function () {
     			div2 = element("div");
     			div1 = element("div");
     			svg = svg_element("svg");
-    			add_location(h1, file$7, 138, 4, 3500);
+    			add_location(h1, file$7, 153, 4, 3960);
     			attr_dev(div0, "class", "hero");
-    			add_location(div0, file$7, 137, 2, 3477);
+    			add_location(div0, file$7, 152, 2, 3937);
     			attr_dev(svg, "class", "svelte-ycojjm");
-    			add_location(svg, file$7, 144, 8, 3700);
+    			add_location(svg, file$7, 159, 8, 4160);
     			attr_dev(div1, "id", "line-graph-container");
     			attr_dev(div1, "class", "svelte-ycojjm");
-    			add_location(div1, file$7, 143, 6, 3660);
+    			add_location(div1, file$7, 158, 6, 4120);
     			attr_dev(div2, "class", "sticky");
-    			add_location(div2, file$7, 142, 4, 3633);
+    			add_location(div2, file$7, 157, 4, 4093);
     			attr_dev(div3, "class", "section-container");
-    			add_location(div3, file$7, 141, 2, 3597);
-    			add_location(section, file$7, 136, 0, 3465);
+    			add_location(div3, file$7, 156, 2, 4057);
+    			add_location(section, file$7, 151, 0, 3925);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -26370,12 +26402,12 @@ var app = (function () {
     	let updateLineGraph;
 
     	onMount(async () => {
-    		$$invalidate(3, accidentData = await csv("https://raw.githubusercontent.com/brybrycha/crash/main/public/Road_Collision_Vehicles_In_Camden.csv"));
+    		$$invalidate(3, accidentData = await csv("https://raw.githubusercontent.com/brybrycha/Crash_Camden_UK/main/public/Cleaned_Road_Collision_Vehicles_In_Camden.csv"));
     		$$invalidate(4, updateLineGraph = drawLineGraph());
     	});
 
     	function drawLineGraph() {
-    		const margin = { top: 30, right: 20, bottom: 30, left: 40 };
+    		const margin = { top: 30, right: 20, bottom: 50, left: 50 };
     		const width = 960 - margin.left - margin.right;
     		const height = 500 - margin.top - margin.bottom;
     		const svg = select(lineSvg).attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", `translate(${margin.left},${margin.top})`);
@@ -26385,6 +26417,8 @@ var app = (function () {
     		const yAxis = axisLeft(y);
     		svg.append("g").attr("class", "x-axis").attr("transform", `translate(0,${height})`);
     		svg.append("g").attr("class", "y-axis");
+    		svg.append("text").attr("class", "x-axis-label").attr("text-anchor", "middle").attr("x", width / 2).attr("y", height + margin.bottom - 10).text("Hour in a Day");
+    		svg.append("text").attr("class", "y-axis-label").attr("text-anchor", "middle").attr("x", -height / 2).attr("y", -margin.left + 15).attr("transform", "rotate(-90)").text("Number of Accidents");
     		const line$1 = line().x(d => x(d.hour)).y(d => y(d.count));
     		const dot = svg.append("circle").attr("r", 5).attr("fill", "red").style("display", "none");
     		const dotText = svg.append("text").attr("dx", 10).attr("dy", -10).style("display", "none");
@@ -26517,13 +26551,13 @@ var app = (function () {
     			br0 = element("br");
     			t0 = space();
     			span = element("span");
-    			span.textContent = "Have";
-    			t2 = text$1(" you ever wondered how severe most accidents are? \n    In this analysis, we explore the distribution of accident severities by examining both daytime and nighttime occurrences. \n    We'll dive into the data to see how often each severity level—slight, serious, and fatal—occurs.\n    ");
+    			span.textContent = "But";
+    			t2 = text$1(" what about the severity of these accidents?\n    Imagine the aftermath of those crashes we just discussed. How serious are these incidents? To answer these questions, \n    we delve into the distribution of accident severities by examining both daytime and nighttime occurrences. \n    We'll dive into the data to see how often each severity level—slight, serious, and fatal—occurs.\n    ");
     			br1 = element("br");
     			add_location(br0, file$6, 5, 4, 58);
     			attr_dev(span, "class", "highlight svelte-ieur5w");
     			add_location(span, file$6, 6, 4, 67);
-    			add_location(br1, file$6, 9, 4, 385);
+    			add_location(br1, file$6, 10, 4, 486);
     			attr_dev(p, "class", "body-text");
     			add_location(p, file$6, 4, 2, 32);
     			add_location(section, file$6, 3, 0, 20);
@@ -26624,6 +26658,8 @@ var app = (function () {
     	let t23;
     	let span10;
     	let t25;
+    	let br5;
+    	let br6;
 
     	const block = {
     		c: function create() {
@@ -26670,7 +26706,9 @@ var app = (function () {
     			t23 = text$1(" and ");
     			span10 = element("span");
     			span10.textContent = "'fatal'";
-    			t25 = text$1(" accidents remind us of the potential dangers on the roads.");
+    			t25 = text$1(" accidents remind us of the potential dangers on the roads.\n    ");
+    			br5 = element("br");
+    			br6 = element("br");
     			attr_dev(span0, "class", "bold");
     			add_location(span0, file$5, 5, 4, 58);
     			add_location(br0, file$5, 6, 4, 90);
@@ -26698,6 +26736,8 @@ var app = (function () {
     			add_location(span9, file$5, 21, 7, 1419);
     			attr_dev(span10, "class", "level svelte-1im7hxk");
     			add_location(span10, file$5, 21, 48, 1460);
+    			add_location(br5, file$5, 22, 4, 1558);
+    			add_location(br6, file$5, 22, 8, 1562);
     			attr_dev(p, "class", "body-text");
     			add_location(p, file$5, 4, 2, 32);
     			add_location(section, file$5, 3, 0, 20);
@@ -26740,6 +26780,8 @@ var app = (function () {
     			append_dev(p, t23);
     			append_dev(p, span10);
     			append_dev(p, t25);
+    			append_dev(p, br5);
+    			append_dev(p, br6);
     		},
     		p: noop$4,
     		i: noop$4,
@@ -26978,6 +27020,8 @@ var app = (function () {
     	let t4;
     	let span2;
     	let t6;
+    	let span3;
+    	let t8;
     	let br1;
 
     	const block = {
@@ -26988,22 +27032,27 @@ var app = (function () {
     			t0 = space();
     			span0 = element("span");
     			span0.textContent = "Let's";
-    			t2 = text$1(" dive into a more detailed distribution based on the time of day. \n    Would the time of the day affect the severity level or distribution of accidents? \n    This bar chart visualization aims to provide insights into whether accidents are more severe during the ");
+    			t2 = text$1(" dive into a more detailed distribution based on the time of day. \n    Would the time of the day affect the severity level or distribution of accidents? \n    Initially, we hypothesized that ");
     			span1 = element("span");
-    			span1.textContent = "daytime";
-    			t4 = text$1(" or ");
+    			span1.textContent = "nighttime";
+    			t4 = text$1(" would see more severe accidents. \n    This bar chart visualization aims to provide insights into whether accidents are more severe during the ");
     			span2 = element("span");
-    			span2.textContent = "nighttime";
-    			t6 = text$1(".\n    ");
+    			span2.textContent = "daytime";
+    			t6 = text$1(" or ");
+    			span3 = element("span");
+    			span3.textContent = "nighttime";
+    			t8 = text$1(".\n    ");
     			br1 = element("br");
     			add_location(br0, file$3, 5, 4, 58);
     			attr_dev(span0, "class", "highlight svelte-fjjzbs");
     			add_location(span0, file$3, 6, 4, 67);
-    			attr_dev(span1, "class", "day svelte-fjjzbs");
-    			add_location(span1, file$3, 8, 108, 365);
-    			attr_dev(span2, "class", "night svelte-fjjzbs");
-    			add_location(span2, file$3, 8, 144, 401);
-    			add_location(br1, file$3, 9, 4, 443);
+    			attr_dev(span1, "class", "night svelte-fjjzbs");
+    			add_location(span1, file$3, 8, 36, 293);
+    			attr_dev(span2, "class", "day svelte-fjjzbs");
+    			add_location(span2, file$3, 9, 108, 472);
+    			attr_dev(span3, "class", "night svelte-fjjzbs");
+    			add_location(span3, file$3, 9, 144, 508);
+    			add_location(br1, file$3, 10, 4, 550);
     			attr_dev(p, "class", "body-text");
     			add_location(p, file$3, 4, 2, 32);
     			add_location(section, file$3, 3, 0, 20);
@@ -27022,6 +27071,8 @@ var app = (function () {
     			append_dev(p, t4);
     			append_dev(p, span2);
     			append_dev(p, t6);
+    			append_dev(p, span3);
+    			append_dev(p, t8);
     			append_dev(p, br1);
     		},
     		p: noop$4,
@@ -27091,38 +27142,50 @@ var app = (function () {
     	let br1;
     	let br2;
     	let t10;
+    	let list;
+    	let li0;
+    	let t11;
     	let span5;
-    	let t12;
+    	let t13;
     	let span6;
-    	let t14;
+    	let t15;
     	let span7;
-    	let t16;
-    	let span8;
+    	let t17;
     	let t18;
-    	let span9;
-    	let t20;
-    	let span10;
-    	let t22;
-    	let span11;
-    	let t24;
-    	let span12;
-    	let t26;
-    	let span13;
-    	let t28;
     	let br3;
+    	let t19;
+    	let li1;
+    	let span8;
+    	let t21;
+    	let span9;
+    	let t23;
+    	let span10;
+    	let t25;
+    	let t26;
     	let br4;
-    	let t29;
-    	let span14;
-    	let t31;
-    	let span15;
-    	let t33;
-    	let span16;
+    	let t27;
+    	let li2;
+    	let t28;
+    	let span11;
+    	let t30;
+    	let span12;
+    	let t32;
+    	let span13;
+    	let t34;
     	let t35;
     	let br5;
-    	let br6;
     	let t36;
+    	let span14;
+    	let t38;
+    	let span15;
+    	let t40;
+    	let span16;
+    	let t42;
+    	let br6;
     	let br7;
+    	let t43;
     	let br8;
+    	let br9;
 
     	const block = {
     		c: function create() {
@@ -27146,51 +27209,63 @@ var app = (function () {
     			t9 = text$1(".\n   \n    ");
     			br1 = element("br");
     			br2 = element("br");
-    			t10 = text$1("\n\n    For ");
+    			t10 = space();
+    			list = element("list");
+    			li0 = element("li");
+    			t11 = text$1("For ");
     			span5 = element("span");
     			span5.textContent = "'slight'";
-    			t12 = text$1(" accidents, which are the most common, we see that 63.4% occur during the ");
+    			t13 = text$1(" accidents, which are the most common, we see that 63.4% occur during the ");
     			span6 = element("span");
     			span6.textContent = "daytime";
-    			t14 = text$1(", while 36.6% happen at ");
+    			t15 = text$1(", while 36.6% happen at ");
     			span7 = element("span");
     			span7.textContent = "night";
-    			t16 = text$1(". \n    ");
+    			t17 = text$1(".");
+    			t18 = space();
+    			br3 = element("br");
+    			t19 = space();
+    			li1 = element("li");
     			span8 = element("span");
     			span8.textContent = "'serious'";
-    			t18 = text$1(" accidents follow a similar pattern, with 64.4% occurring during the ");
+    			t21 = text$1(" accidents follow a similar pattern, with 64.4% occurring during the ");
     			span9 = element("span");
     			span9.textContent = "day";
-    			t20 = text$1(" and 35.6% at ");
+    			t23 = text$1(" and 35.6% at ");
     			span10 = element("span");
     			span10.textContent = "night";
-    			t22 = text$1(". \n    Even for ");
+    			t25 = text$1(".");
+    			t26 = space();
+    			br4 = element("br");
+    			t27 = space();
+    			li2 = element("li");
+    			t28 = text$1("Even for ");
     			span11 = element("span");
     			span11.textContent = "'fatal'";
-    			t24 = text$1(" accidents, the distribution is close, with 68.0% happening during the ");
+    			t30 = text$1(" accidents, the distribution is close, with 68.0% happening during the ");
     			span12 = element("span");
     			span12.textContent = "day";
-    			t26 = text$1(" and 32.0% at ");
+    			t32 = text$1(" and 32.0% at ");
     			span13 = element("span");
     			span13.textContent = "night";
-    			t28 = text$1(".\n    \n    ");
-    			br3 = element("br");
-    			br4 = element("br");
-    			t29 = text$1("\n\n    These consistent proportions across different times of the day suggest that the severity of accidents is ");
+    			t34 = text$1(".");
+    			t35 = space();
+    			br5 = element("br");
+    			t36 = text$1("\n\n    These consistent proportions across different times of the day suggest that the severity of accidents is ");
     			span14 = element("span");
     			span14.textContent = "not significantly \n    influenced";
-    			t31 = text$1(" by whether it is ");
+    			t38 = text$1(" by whether it is ");
     			span15 = element("span");
     			span15.textContent = "day";
-    			t33 = text$1(" or ");
+    			t40 = text$1(" or ");
     			span16 = element("span");
     			span16.textContent = "night";
-    			t35 = text$1(". This might indicate that factors other than the time of day, such as road conditions, \n    driver behavior, and traffic volume, play a more crucial role in determining the severity of accidents.\n   \n    ");
-    			br5 = element("br");
+    			t42 = text$1(". This might indicate that factors other than the time of day, such as road conditions, \n    driver behavior, and traffic volume, play a more crucial role in determining the severity of accidents.\n   \n    ");
     			br6 = element("br");
-    			t36 = text$1("\n\n    By examining the bar chart, we can conclude that while the time of day may contribute to the likelihood of accidents occurring, \n    it does not drastically change the severity distribution. This insight helps us understand that improving road safety requires a multifaceted approach, \n    addressing various factors beyond just the time of day.\n    \n    ");
     			br7 = element("br");
+    			t43 = text$1("\n\n    By examining the bar chart, we can conclude that while the time of day may contribute to the likelihood of accidents occurring, \n    it does not drastically change the severity distribution. This insight helps us understand that improving road safety requires a multifaceted approach, \n    addressing various factors beyond just the time of day.\n    \n    ");
     			br8 = element("br");
+    			br9 = element("br");
     			attr_dev(span0, "class", "bold");
     			add_location(span0, file$2, 5, 4, 58);
     			add_location(br0, file$2, 6, 4, 90);
@@ -27205,35 +27280,40 @@ var app = (function () {
     			add_location(br1, file$2, 10, 4, 508);
     			add_location(br2, file$2, 10, 8, 512);
     			attr_dev(span5, "class", "level svelte-1uao2r0");
-    			add_location(span5, file$2, 12, 8, 526);
+    			add_location(span5, file$2, 12, 16, 544);
     			attr_dev(span6, "class", "day svelte-1uao2r0");
-    			add_location(span6, file$2, 12, 117, 635);
+    			add_location(span6, file$2, 12, 125, 653);
     			attr_dev(span7, "class", "night svelte-1uao2r0");
-    			add_location(span7, file$2, 12, 173, 691);
+    			add_location(span7, file$2, 12, 181, 709);
+    			add_location(li0, file$2, 12, 8, 536);
+    			add_location(br3, file$2, 13, 8, 756);
     			attr_dev(span8, "class", "level svelte-1uao2r0");
-    			add_location(span8, file$2, 13, 4, 730);
+    			add_location(span8, file$2, 14, 12, 773);
     			attr_dev(span9, "class", "day svelte-1uao2r0");
-    			add_location(span9, file$2, 13, 109, 835);
+    			add_location(span9, file$2, 14, 117, 878);
     			attr_dev(span10, "class", "night svelte-1uao2r0");
-    			add_location(span10, file$2, 13, 151, 877);
+    			add_location(span10, file$2, 14, 159, 920);
+    			add_location(li1, file$2, 14, 8, 769);
+    			add_location(br4, file$2, 15, 8, 967);
     			attr_dev(span11, "class", "level svelte-1uao2r0");
-    			add_location(span11, file$2, 14, 13, 925);
+    			add_location(span11, file$2, 16, 21, 993);
     			attr_dev(span12, "class", "day svelte-1uao2r0");
-    			add_location(span12, file$2, 14, 118, 1030);
+    			add_location(span12, file$2, 16, 126, 1098);
     			attr_dev(span13, "class", "night svelte-1uao2r0");
-    			add_location(span13, file$2, 14, 160, 1072);
-    			add_location(br3, file$2, 16, 4, 1115);
-    			add_location(br4, file$2, 16, 8, 1119);
+    			add_location(span13, file$2, 16, 168, 1140);
+    			add_location(li2, file$2, 16, 8, 980);
+    			add_location(list, file$2, 11, 4, 521);
+    			add_location(br5, file$2, 20, 4, 1205);
     			attr_dev(span14, "class", "underline svelte-1uao2r0");
-    			add_location(span14, file$2, 18, 109, 1234);
+    			add_location(span14, file$2, 22, 109, 1320);
     			attr_dev(span15, "class", "day svelte-1uao2r0");
-    			add_location(span15, file$2, 19, 39, 1316);
+    			add_location(span15, file$2, 23, 39, 1402);
     			attr_dev(span16, "class", "night svelte-1uao2r0");
-    			add_location(span16, file$2, 19, 71, 1348);
-    			add_location(br5, file$2, 22, 4, 1585);
-    			add_location(br6, file$2, 22, 8, 1589);
-    			add_location(br7, file$2, 28, 4, 1954);
-    			add_location(br8, file$2, 28, 8, 1958);
+    			add_location(span16, file$2, 23, 71, 1434);
+    			add_location(br6, file$2, 26, 4, 1671);
+    			add_location(br7, file$2, 26, 8, 1675);
+    			add_location(br8, file$2, 32, 4, 2040);
+    			add_location(br9, file$2, 32, 8, 2044);
     			attr_dev(p, "class", "body-text");
     			add_location(p, file$2, 4, 2, 32);
     			add_location(section, file$2, 3, 0, 20);
@@ -27259,38 +27339,50 @@ var app = (function () {
     			append_dev(p, br1);
     			append_dev(p, br2);
     			append_dev(p, t10);
-    			append_dev(p, span5);
-    			append_dev(p, t12);
-    			append_dev(p, span6);
-    			append_dev(p, t14);
-    			append_dev(p, span7);
-    			append_dev(p, t16);
-    			append_dev(p, span8);
-    			append_dev(p, t18);
-    			append_dev(p, span9);
-    			append_dev(p, t20);
-    			append_dev(p, span10);
-    			append_dev(p, t22);
-    			append_dev(p, span11);
-    			append_dev(p, t24);
-    			append_dev(p, span12);
-    			append_dev(p, t26);
-    			append_dev(p, span13);
-    			append_dev(p, t28);
-    			append_dev(p, br3);
-    			append_dev(p, br4);
-    			append_dev(p, t29);
-    			append_dev(p, span14);
-    			append_dev(p, t31);
-    			append_dev(p, span15);
-    			append_dev(p, t33);
-    			append_dev(p, span16);
+    			append_dev(p, list);
+    			append_dev(list, li0);
+    			append_dev(li0, t11);
+    			append_dev(li0, span5);
+    			append_dev(li0, t13);
+    			append_dev(li0, span6);
+    			append_dev(li0, t15);
+    			append_dev(li0, span7);
+    			append_dev(li0, t17);
+    			append_dev(list, t18);
+    			append_dev(list, br3);
+    			append_dev(list, t19);
+    			append_dev(list, li1);
+    			append_dev(li1, span8);
+    			append_dev(li1, t21);
+    			append_dev(li1, span9);
+    			append_dev(li1, t23);
+    			append_dev(li1, span10);
+    			append_dev(li1, t25);
+    			append_dev(list, t26);
+    			append_dev(list, br4);
+    			append_dev(list, t27);
+    			append_dev(list, li2);
+    			append_dev(li2, t28);
+    			append_dev(li2, span11);
+    			append_dev(li2, t30);
+    			append_dev(li2, span12);
+    			append_dev(li2, t32);
+    			append_dev(li2, span13);
+    			append_dev(li2, t34);
     			append_dev(p, t35);
     			append_dev(p, br5);
-    			append_dev(p, br6);
     			append_dev(p, t36);
+    			append_dev(p, span14);
+    			append_dev(p, t38);
+    			append_dev(p, span15);
+    			append_dev(p, t40);
+    			append_dev(p, span16);
+    			append_dev(p, t42);
+    			append_dev(p, br6);
     			append_dev(p, br7);
+    			append_dev(p, t43);
     			append_dev(p, br8);
+    			append_dev(p, br9);
     		},
     		p: noop$4,
     		i: noop$4,
@@ -27620,7 +27712,7 @@ var app = (function () {
     			t11 = space();
     			create_component(sev2a.$$.fragment);
     			attr_dev(div, "class", "container svelte-ub98ee");
-    			add_location(div, file, 105, 0, 3031);
+    			add_location(div, file, 79, 0, 2273);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -27743,36 +27835,6 @@ var app = (function () {
     		updatePieChartData();
     	}
 
-    	function cleanData() {
-    		accidentData.forEach(d => {
-    			// Clean 'Date' and extract year
-    			if (d.Date) {
-    				const [day, month, year] = d.Date.split(' ')[0].split('/');
-    				d.accidentYear = +year;
-    			} else {
-    				d.accidentYear = null;
-    			}
-
-    			// Clean 'Time' column
-    			d.Time = d.Time ? parseFloat(d.Time.replace(':', '.')) : null;
-
-    			// Clean 'Driver Sex' column
-    			if (d["Driver Sex"]) {
-    				const sex = d["Driver Sex"].toLowerCase();
-
-    				if (sex.includes('male')) {
-    					d.driverSex = 'Male';
-    				} else if (sex.includes('female')) {
-    					d.driverSex = 'Female';
-    				} else {
-    					d.driverSex = 'Not Traced';
-    				}
-    			} else {
-    				d.driverSex = 'Not Traced';
-    			}
-    		});
-    	}
-
     	function updatePieChartData() {
     		const filteredData = accidentData.filter(d => {
     			return d.accidentYear >= selectedYearRange[0] && d.accidentYear <= selectedYearRange[1];
@@ -27831,7 +27893,6 @@ var app = (function () {
     		pieChartData,
     		genderData,
     		fetchAccidentData,
-    		cleanData,
     		updatePieChartData
     	});
 

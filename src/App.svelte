@@ -28,33 +28,7 @@
     updatePieChartData();
   }
 
-  function cleanData() {
-    accidentData.forEach(d => {
-      // Clean 'Date' and extract year
-      if (d.Date) {
-        const [day, month, year] = d.Date.split(' ')[0].split('/');
-        d.accidentYear = +year;
-      } else {
-        d.accidentYear = null;
-      }
-// Clean 'Time' column
-      d.Time = d.Time ? parseFloat(d.Time.replace(':', '.')) : null;
-
-      // Clean 'Driver Sex' column
-      if (d["Driver Sex"]) {
-        const sex = d["Driver Sex"].toLowerCase();
-        if (sex.includes('male')) {
-          d.driverSex = 'Male';
-        } else if (sex.includes('female')) {
-          d.driverSex = 'Female';
-        } else {
-          d.driverSex = 'Not Traced';
-        }
-      } else {
-        d.driverSex = 'Not Traced';
-      }
-    });
-  }
+  
   function updatePieChartData() {
     const filteredData = accidentData.filter(d => {
       return d.accidentYear >= selectedYearRange[0] && d.accidentYear <= selectedYearRange[1];

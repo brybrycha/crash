@@ -1,16 +1,26 @@
-<script>
-</script>
-
 <section>
   <p class="body-text">
-    <span class="bold"></span> We were interested in researching about the how does time of the day affects car accidents rate, and we used car accidents data in Camdens, UK. 
-    We created a line chart with d3 and svelte scrolly so that the graphs gets drawn when we scroll down. We also have created a map chart with dots on it utilizing d3 and mapbox. 
-    You can see the accidents frequency that happened day time and night time, and it contains zoom function, count function, and resizing accidents counting area. We also have created a bar chart that allows user to compare accidents’ 
-    severity between day time and night time accidents. The most Challenging part of the project is going go be making map visualization and bar chart interactive and making transition smooth. As the buttons of night and day time have to
-    change the design of maps and bar chart data design, it is going to be challenging.
+    <span class="highlight">P</span>icture a busy morning in Camden, UK. 
+    The streets are alive with activity when suddenly, the sound of screeching tires and a crash pierces the air. 
+    What if the time of day could predict the likelihood of such accidents?
+    <br><br>
+    This article examines the frequency and severity of auto accidents in Camden, UK, 
+    over the course of the day. We explore trends in the data by using a variety of interactive visualizations.
+    <br><br>
+    Join us as we delve into the daily rhythms of road safety, analyzing peak times and comparing accidents during the day and night to understand how timing influences road incidents.
+    <br><br>
   </p>
-  <p class="body-text">This is a trr</p>
 </section>
 
 <style>
+  .highlight {
+    font-size: 3em; /* Increase the font size significantly */
+    font-weight: bold; /* Make the text bold */
+    float: left; /* Float the letter to the left */
+    line-height: 1; /* Adjust line height */
+    margin-right: 5px; /* Add some space to the right */
+  }
+  .body-text {
+    font-size: 1.2em; /* Increase the font size of the body text slightly */
+  }
 </style>

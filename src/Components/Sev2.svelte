@@ -6,10 +6,12 @@
     <br>
     <span class="highlight">Let's</span> dive into a more detailed distribution based on the time of day. 
     Would the time of the day affect the severity level or distribution of accidents? 
+    Initially, we hypothesized that <span class='night'>nighttime</span> would see more severe accidents. 
     This bar chart visualization aims to provide insights into whether accidents are more severe during the <span class='day'>daytime</span> or <span class='night'>nighttime</span>.
     <br>
   </p>
 </section>
+
 
 <style>
   .highlight {

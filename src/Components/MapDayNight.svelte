@@ -10,12 +10,12 @@
   let updateLineGraph;
 
   onMount(async () => {
-    accidentData = await csv("https://raw.githubusercontent.com/brybrycha/crash/main/public/Road_Collision_Vehicles_In_Camden.csv");
+    accidentData = await csv("https://raw.githubusercontent.com/brybrycha/Crash_Camden_UK/main/public/Cleaned_Road_Collision_Vehicles_In_Camden.csv");
     updateLineGraph = drawLineGraph();
   });
 
   function drawLineGraph() {
-    const margin = { top: 30, right: 20, bottom: 30, left: 40 };
+    const margin = { top: 30, right: 20, bottom: 50, left: 50 };
     const width = 960 - margin.left - margin.right;
     const height = 500 - margin.top - margin.bottom;
 
@@ -41,6 +41,21 @@
 
     svg.append("g")
       .attr("class", "y-axis");
+
+    svg.append("text")
+      .attr("class", "x-axis-label")
+      .attr("text-anchor", "middle")
+      .attr("x", width / 2)
+      .attr("y", height + margin.bottom - 10)
+      .text("Hour in a Day");
+
+    svg.append("text")
+      .attr("class", "y-axis-label")
+      .attr("text-anchor", "middle")
+      .attr("x", -height / 2)
+      .attr("y", -margin.left + 15)
+      .attr("transform", "rotate(-90)")
+      .text("Number of Accidents");
 
     const line = d3.line()
       .x(d => x(d.hour))

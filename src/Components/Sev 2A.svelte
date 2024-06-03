@@ -9,12 +9,16 @@
     The bar chart shows that for each severity level—slight, serious, and fatal—the proportions of <span class='day'>daytime</span> and <span class='night'>nighttime</span> accidents are <span class='underline'>relatively similar</span>.
    
     <br><br>
+    <list>
+        <li>For <span class='level'>'slight'</span> accidents, which are the most common, we see that 63.4% occur during the <span class='day'>daytime</span>, while 36.6% happen at <span class='night'>night</span>.</li>
+        <br>
+        <li><span class='level'>'serious'</span> accidents follow a similar pattern, with 64.4% occurring during the <span class='day'>day</span> and 35.6% at <span class='night'>night</span>.</li>
+        <br>
+        <li>Even for <span class='level'>'fatal'</span> accidents, the distribution is close, with 68.0% happening during the <span class='day'>day</span> and 32.0% at <span class='night'>night</span>.
+        </li>
+    </list>
 
-    For <span class='level'>'slight'</span> accidents, which are the most common, we see that 63.4% occur during the <span class='day'>daytime</span>, while 36.6% happen at <span class='night'>night</span>. 
-    <span class='level'>'serious'</span> accidents follow a similar pattern, with 64.4% occurring during the <span class='day'>day</span> and 35.6% at <span class='night'>night</span>. 
-    Even for <span class='level'>'fatal'</span> accidents, the distribution is close, with 68.0% happening during the <span class='day'>day</span> and 32.0% at <span class='night'>night</span>.
-    
-    <br><br>
+    <br>
 
     These consistent proportions across different times of the day suggest that the severity of accidents is <span class='underline'>not significantly 
     influenced</span> by whether it is <span class='day'>day</span> or <span class='night'>night</span>. This might indicate that factors other than the time of day, such as road conditions, 
