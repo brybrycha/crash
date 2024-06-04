@@ -7,7 +7,8 @@
     "dev": "rollup -c -w",
     "start": "sirv public -D -m 1",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "force-deploy": "git add . && git commit -m 'Temp commit' && npm run deploy && git reset --hard HEAD~1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
