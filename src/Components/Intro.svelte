@@ -14,13 +14,13 @@
 
 <style>
   .highlight {
-    font-size: 3em; /* Increase the font size significantly */
-    font-weight: bold; /* Make the text bold */
-    float: left; /* Float the letter to the left */
-    line-height: 1; /* Adjust line height */
-    margin-right: 5px; /* Add some space to the right */
+    font-size: 3em; /* Increase the font size significantly /
+    font-weight: bold; / Make the text bold /
+    float: left; / Float the letter to the left /
+    line-height: 1; / Adjust line height /
+    margin-right: 5px; / Add some space to the right /
   }
   .body-text {
-    font-size: 1.2em; /* Increase the font size of the body text slightly */
+    font-size: 1.2em; / Increase the font size of the body text slightly */
   }
 </style>
