@@ -12,6 +12,10 @@
   import Sev2 from "./Components/Sev2.svelte";
   import Sev2A from "./Components/Sev 2A.svelte";
   import BarChart from "./Components/BarChart.svelte";
+  import Mapexp from "./Components/Mapexp.svelte";
+  import Lineintro from "./Components/Lineintro.svelte";
+  import Mapdetail from "./Components/Mapdetail.svelte";
+  import Conclu from "./Components/Conclu.svelte";
 
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
@@ -61,7 +65,7 @@ onMount(() => {
 
 <style>
   .container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
  </style> 
@@ -70,16 +74,20 @@ onMount(() => {
 <Meta />
 <Title />
 <Intro />
+
 <LineWrite />
 
+<Lineintro />
 <MapDayNight /> 
 
 <LineExp />
 <!-- <Intro /> -->
 
+<Mapexp />
 <div class = "container">
   <Map />
 </div>
+<Mapdetail />
 
 <Sev1 />
 <PieChart />
@@ -89,7 +97,4 @@ onMount(() => {
 <BarChart/>
 <Sev2A />
 
-
-<!-- <Conclusion /> -->
-
-<!-- <Resources /> -->
+<Conclu />

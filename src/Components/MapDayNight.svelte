@@ -101,6 +101,7 @@
         .style("stroke-width", "2px");
 
       path.exit().remove();
+      
 
       if (accidentCounts.length > 0) {
         const latestData = accidentCounts[accidentCounts.length - 1];
@@ -147,11 +148,19 @@
     display: block;
     margin: auto;
   }
+  .title {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
 </style>
 
 <section>
-  <div class='hero'>
-    <h1>Accident with Time</h1>
+  <div class="title">
+    Distribution of Accident Severities
   </div>
   <Clock {currentHour} onChangeHour={handleHourChange} />
   <div class="section-container">

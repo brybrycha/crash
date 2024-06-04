@@ -230,13 +230,57 @@
     border-radius: 5px;
     z-index: 1;
   }
+  .title {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+  .legend {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  .legend h4 {
+    margin: 0 0 5px 0;
+  }
+  .legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  .legend div span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
 </style>
+
+<div class="title">
+  Accidents Distribution in Daytime and Nighttime
+</div>
 
 <div id="map-container">
   <div class="info-box">
     <strong>Total Accidents in View:</strong> {totalAccidents}
   </div>
   <div id="map"></div>
+  <div class="legend">
+    <h4>Number of Accidents</h4>
+    <div><span style="background-color: #FFC0CB"></span>1</div>
+    <div><span style="background-color: #FF9999"></span>5</div>
+    <div><span style="background-color: #FF6666"></span>10</div>
+    <div><span style="background-color: #FF3333"></span>15</div>
+    <div><span style="background-color: #FF0000"></span>20</div>
+    <div><span style="background-color: #8B0000"></span>25+</div>
+  </div>
 </div>
 
 <div class="button-container">
