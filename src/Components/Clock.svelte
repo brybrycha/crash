@@ -5,7 +5,7 @@
   export let onChangeHour;
 
   let scrollDelta = 0;
-  const scrollThreshold = 18; // Adjust this value to control sensitivity
+  const scrollThreshold = 2; // Adjust this value to control sensitivity
 
   function handleWheel(event) {
     scrollDelta += event.deltaY;
